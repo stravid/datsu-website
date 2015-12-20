@@ -1,0 +1,16 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 26px;
+  background-color: #2e343a;
+  color: #ffffff;
+}
+
+a {
+  color: #528b6e;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 2em;
+}
