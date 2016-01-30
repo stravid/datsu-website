@@ -1,3 +1,4 @@
 #!/bin/bash
 
-rsync --recursive --compress --progress -e 'ssh -p 5020' public/ deployer@www.dartboard.io:~/apps/datsu-website
+bin/middleman build
+rsync --recursive --compress --progress -e 'ssh -p 5020' build/ deployer@www.dartboard.io:~/apps/datsu-website

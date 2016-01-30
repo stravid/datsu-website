@@ -1,0 +1,160 @@
+@import "variables";
+@import "bourbon";
+@import "neat";
+@import "normalize";
+
+body {
+  font-family: 'Droid Serif', serif;
+  font-size: 17px;
+  line-height: 1.78;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid $outer-space;
+  margin: 4em 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h3 {
+  font-size: 40px;
+  line-height: 1.01;
+  margin: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+a {
+  color: $como;
+}
+
+.link-button {
+  display: inline-block;
+  font-family: 'Open Sans', sans-serif;
+  padding: 12px 60px 12px 20px;
+  color: $white;
+  background-color: $como;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  line-height: 1.1;
+
+  svg {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    height: 24px;
+    fill: $white;
+  }
+}
+
+.container {
+  @include outer-container;
+
+  @media (max-width: $laptop-breakpoint) {
+    padding: 0 1em;
+  }
+}
+
+.teaser-image {
+  @media (max-width: $laptop-breakpoint) {
+    margin-top: 1em;
+  }
+}
+
+.two-columns-column {
+  @include span-columns(6);
+
+  @media (max-width: $tablet-breakpoint) {
+    @include span-columns(12);
+  }
+}
+
+.aligned-center {
+  text-align: center;
+}
+
+.aligned-right {
+  text-align: right;
+
+  @media (max-width: $tablet-breakpoint) {
+    text-align: left;
+  }
+}
+
+.full-width-header {
+  background-color: $outer-space;
+  width: 100%;
+}
+
+.full-page-call-to-action {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.full-width-header__content {
+  @include outer-container;
+
+  color: $white;
+  padding: 1em 0;
+
+  h2 {
+    font-size: 48px;
+    margin: 0;
+  }
+
+  a {
+    margin: 0.7em 0 0 0;
+
+    @media (max-width: $laptop-breakpoint) {
+      margin: 0 0 1em 0;
+    }
+  }
+
+  @media (max-width: $laptop-breakpoint) {
+    padding: 0 1em;
+  }
+}
+
+.full-width-footer {
+  background-color: $outer-space;
+  width: 100%;
+  margin: 2em 0 0 0;
+}
+
+.full-width-footer__content {
+  @include outer-container;
+
+  font-family: 'Open Sans', sans-serif;
+  color: $white;
+  padding: 1em 0;
+
+  a {
+    font-size: 17px;
+    font-weight: 700;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $white;
+
+    &:hover {
+      color: $como;
+    }
+  }
+
+  @media (max-width: $laptop-breakpoint) {
+    padding: 0 1em;
+  }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta name="description" content="Free darts scorer app. Multiple players, X01, Double Out, Master Out, Straight Out and advanced statistics.">
+
+    <title><%= "#{(current_page.data.title || "Online Darts Scorer")} &ndash; dartboard.io" %></title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700|Droid+Serif:400,700" rel="stylesheet" type="text/css">
+
+    <%= stylesheet_link_tag :site %>
+    <%= javascript_include_tag :all %>
+  </head>
+
+  <body>
+    <header class="full-width-header">
+      <div class="full-width-header__content">
+        <div class="two-columns-column">
+          <h2>DARTBOARD.IO</h2>
+        </div>
+        <div class="two-columns-column aligned-right">
+          <%= link_to "Go to online scorer #{inline_svg("icons/arrow-right.svg")}", "http://app.dartboard.io", class: "link-button" %>
+        </div>
+      </div>
+    </header>
+    <%= yield %>
+    <footer class="full-width-footer">
+      <div class="full-width-footer__content">
+        <%= link_to "Home", "/" %>
+        <%= link_to "Imprint", "/imprint.html" %>
+        <%= link_to "Press", "/press.html" %>
+        <%= link_to "Datsu Online Scorer", "http://app.dartboard.io" %>
+      </div>
+    </footer>
+
+    <% if build? %>
+      <script type="text/javascript" async defer id="gauges-tracker" data-site-id="56acfd65bb922a4d540002db" src="//secure.gaug.es/track.js"></script>
+    <% end %>
+  </body>
+</html>
