@@ -29,6 +29,10 @@ h1, h3 {
   margin: 1em 0;
   text-transform: uppercase;
   letter-spacing: 1px;
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 24px;
+  }
 }
 
 a {
@@ -51,10 +55,19 @@ a {
 
   svg {
     position: absolute;
-    top: 14px;
-    right: 20px;
+    top: 12px;
+    right: 10px;
     height: 24px;
     fill: $white;
+  }
+
+  @media (max-width: $tablet-breakpoint) {
+    font-size: 16px;
+    padding: 12px 30px 12px 10px;
+
+    svg {
+      height: 16px;
+    }
   }
 }
 
